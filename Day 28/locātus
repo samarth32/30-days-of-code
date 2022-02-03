@@ -1,0 +1,13 @@
+a=int(input())
+b=int(input())
+c=list(map(int,input().split()))
+if b not in c:
+    print(-1,-1)
+else:
+    start = c.index(b)
+    c.reverse()
+    stop = c.index(b)
+    ans = []
+    ans.append(start)
+    ans.append(a-1-stop)
+    print(*ans)
